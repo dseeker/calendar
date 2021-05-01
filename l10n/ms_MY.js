@@ -26,6 +26,7 @@ OC.L10N.register(
     "Weekly" : "Setiap minggu",
     "Location" : "Lokasi",
     "Description" : "Keterangan",
-    "Mail" : "Mel"
+    "Mail" : "Mel",
+    "Play" : "Main"
 },
 "nplurals=1; plural=0;");

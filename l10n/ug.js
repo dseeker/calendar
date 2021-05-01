@@ -23,6 +23,7 @@ OC.L10N.register(
     "Close" : "ياپ",
     "today" : "بۈگۈن",
     "Location" : "ئورنى",
-    "Description" : "چۈشەندۈرۈش"
+    "Description" : "چۈشەندۈرۈش",
+    "Play" : "چال"
 },
 "nplurals=2; plural=(n != 1);");

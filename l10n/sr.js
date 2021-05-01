@@ -79,6 +79,7 @@ OC.L10N.register(
     "Cinema" : "Биоскоп",
     "Review" : "Претпреглед",
     "Mail" : "поштом",
+    "Play" : "Пусти",
     "Dentist" : "Стоматолог",
     "Global" : "Цео свет"
 },

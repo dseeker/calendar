@@ -32,6 +32,7 @@ OC.L10N.register(
     "today" : "আজ",
     "Location" : "অবস্থান",
     "Description" : "বিবরণ",
-    "Mail" : "মেইল"
+    "Mail" : "মেইল",
+    "Play" : "বাজাও"
 },
 "nplurals=2; plural=(n != 1);");

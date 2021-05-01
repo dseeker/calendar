@@ -52,6 +52,7 @@ OC.L10N.register(
     "Tentative" : "Tentatief",
     "Categories" : "Kategorieë",
     "Mail" : "Pos",
+    "Play" : "Speel Af",
     "Global" : "Globaal"
 },
 "nplurals=2; plural=(n != 1);");

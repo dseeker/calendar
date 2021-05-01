@@ -43,6 +43,7 @@
     "Confirmed" : "Stadfesta",
     "Tentative" : "Førebels",
     "Mail" : "Post",
+    "Play" : "Spel",
     "Global" : "Global"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }

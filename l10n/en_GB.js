@@ -13,10 +13,8 @@ OC.L10N.register(
     "Week" : "Week",
     "Month" : "Month",
     "List" : "List",
-    "Edit color" : "Edit colour",
     "Download" : "Download",
     "Delete" : "Delete",
-    "An error occurred, unable to change the calendar's color." : "An error occurred, unable to change the calendar's colour.",
     "Share link" : "Share link",
     "Share with users or groups" : "Share with users or groups",
     "can edit" : "can edit",
@@ -61,11 +59,11 @@ OC.L10N.register(
     "Confirmed" : "Confirmed",
     "Tentative" : "Tentative",
     "Categories" : "Categories",
-    "Custom color" : "Custom colour",
     "Presentation" : "Presentation",
     "Review" : "Review",
     "Office" : "Office",
     "Mail" : "Mail",
+    "Play" : "Play",
     "Global" : "Global"
 },
 "nplurals=2; plural=(n != 1);");

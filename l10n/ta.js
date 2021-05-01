@@ -26,6 +26,7 @@ OC.L10N.register(
     "Close" : "மூடுக",
     "today" : "இன்று",
     "Location" : "இடம்",
-    "Description" : "விவரிப்பு"
+    "Description" : "விவரிப்பு",
+    "Play" : "Play"
 },
 "nplurals=2; plural=(n != 1);");

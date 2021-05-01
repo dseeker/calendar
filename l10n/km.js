@@ -28,6 +28,7 @@ OC.L10N.register(
     "today" : "ថ្ងៃនេះ",
     "Location" : "ទីតាំង",
     "Description" : "ការ​អធិប្បាយ",
-    "Mail" : "សំបុត្រ"
+    "Mail" : "សំបុត្រ",
+    "Play" : "លេង"
 },
 "nplurals=1; plural=0;");
