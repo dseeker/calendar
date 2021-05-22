@@ -23,7 +23,13 @@
 <template>
 	<FullCalendar
 		ref="fullCalendar"
-		:options="options" />
+		:options="options" >
+		<template v-slot:eventContent="arg">
+			<div :title="(arg.timeText ? arg.timeText + ' - ' : '') + arg.event.title + (arg.event.extendedProps.description ?  ': ' + arg.event.extendedProps.description : '')">
+				<EventWithHooks :event="arg.event"/>
+			</div>
+		</template>
+	</FullCalendar>
 </template>
 
 <script>
@@ -66,11 +72,13 @@ import debounce from 'debounce'
 import { getLocale } from '@nextcloud/l10n'
 import { getYYYYMMDDFromFirstdayParam } from '../utils/date.js'
 import { getFirstDayOfWeekFromMomentLocale } from '../utils/moment.js'
+import EventWithHooks from "./EventWithHooks.vue";
 
 export default {
 	name: 'CalendarGrid',
 	components: {
 		FullCalendar,
+		EventWithHooks
 	},
 	props: {
 		/**
@@ -132,7 +140,20 @@ export default {
 				noEventsDidMount,
 				eventOrder: ['start', '-duration', 'allDay', eventOrder],
 				forceEventDuration: false,
-				headerToolbar: false,
+				headerToolbar: {
+					end: `today ${this.$route.params.view},timeListMonth` //prev,next
+				},
+				fixedWeekCount: false,
+				views:{
+					timeListMonth: {
+						type: 'timeGrid',
+						duration: { weeks: 10 },
+						dayCount: 90,
+						buttonText: 'DEV 10 weeks',
+						slotDuration: '12:00:00',
+						dayHeaderFormat: { day: 'numeric', omitCommas: true }, // weekday: 'short', 
+					}
+				},
 				height: '100%',
 				slotDuration: this.slotDuration,
 				weekNumbers: this.showWeekNumbers,

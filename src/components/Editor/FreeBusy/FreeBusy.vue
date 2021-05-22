@@ -48,6 +48,9 @@
 			:date="currentDate"
 			:is-all-day="true"
 			@change="setCurrentDate" />
+		<div v-if="eventSources">{{ eventSources }}</div>
+		<div v-if="resources">{{ resources }}</div>
+		<div> {{ Object.keys(organizer) }} {{ Object.keys(organizer.attendeeProperty) }}</div>
 	</Modal>
 </template>
 
@@ -170,6 +173,7 @@ export default {
 
 			// for (const attendee of [this.organizer, ...this.attendees]) {
 			for (const attendee of this.attendees) {
+				console.log('-> Freebusy resources', attendee)
 				resources.push({
 					id: attendee.attendeeProperty.email,
 					title: attendee.commonName || attendee.uri.substr(7),
@@ -212,7 +216,32 @@ export default {
 		options() {
 			return {
 				// Initialization:
-				initialView: 'resourceTimelineDay',
+				// initialView: 'resourceTimelineDay',
+				 timeZone: 'UTC',
+			    headerToolbar: {
+			      left: 'today prev,next',
+			      center: 'title',
+			      right: 'resourceTimelineDay,resourceTimelineTenDay,resourceTimelineMonth,resourceTimelineYear'
+			    },
+			    initialView: 'resourceTimelineDay',
+			    scrollTime: '08:00',
+			    aspectRatio: 1.5,
+			    views: {
+			      resourceTimelineDay: {
+			        buttonText: ':15 slots',
+			        slotDuration: '00:15'
+			      },
+			      resourceTimelineTenDay: {
+			        type: 'resourceTimeline',
+			        duration: { weeks: 10 },
+			        buttonText: '10 weeks'
+			      }
+			    },
+			    editable: true,
+			    resourceAreaHeaderContent: 'Rooms',
+			    // resources: 'https://fullcalendar.io/demo-resources.json?with-nesting&with-colors',
+			    // eventSources: 'https://fullcalendar.io/demo-events.json?single-day&for-resource-timeline',
+
 				initialDate: this.startDate,
 				schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source',
 				// Data

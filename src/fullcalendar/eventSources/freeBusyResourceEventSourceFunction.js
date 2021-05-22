@@ -35,6 +35,7 @@ import { getParserManager } from 'calendar-js'
  * @returns {Object[]}
  */
 export default function(uri, calendarData, success, start, end, timezone) {
+	console.log('-> freeBusyResourceEventSourceFunction', uri, calendarData)
 	if (!success) {
 		return [{
 			id: Math.random().toString(36).substring(7),

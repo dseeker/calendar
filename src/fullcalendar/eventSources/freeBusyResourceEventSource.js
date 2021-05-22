@@ -36,6 +36,7 @@ import logger from '../../utils/logger.js'
  * @returns {{startEditable: boolean, resourceEditable: boolean, editable: boolean, id: string, durationEditable: boolean, events: events}}
  */
 export default function(id, organizer, attendees) {
+	console.log('-> freeBusyResourceEventSource', id, organizer, attendees)
 	return {
 		id: 'free-busy-event-source-' + id,
 		editable: false,

@@ -31,7 +31,7 @@
  */
 export default function(id, resources, eventStart, eventEnd) {
 	const resourceIds = resources.map((resource) => resource.id)
-
+	console.log('-> freeBusyFakeBlockingEventSource', id, resources, resourceIds)
 	return {
 		id: 'free-busy-fake-blocking-event-source-' + id,
 		editable: false,

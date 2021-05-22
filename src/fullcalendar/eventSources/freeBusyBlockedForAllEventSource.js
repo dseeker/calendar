@@ -35,7 +35,7 @@ import logger from '../../utils/logger.js'
  */
 export default function(organizer, attendees, resources) {
 	const resourceIds = resources.map((resource) => resource.id)
-
+	console.log('-> freeBusyBlockedForAllEventSource', organizer, attendees, resources, resourceIds)
 	return {
 		id: 'free-busy-free-for-all',
 		editable: false,
